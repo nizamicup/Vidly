@@ -162,18 +162,38 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607130646238_InitialModel.cs" />
+    <Compile Include="Migrations\201607130646238_InitialModel.Designer.cs">
+      <DependentUpon>201607130646238_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607130655342_addissubscribetonewslettertocustomer.cs" />
+    <Compile Include="Migrations\201607130655342_addissubscribetonewslettertocustomer.Designer.cs">
+      <DependentUpon>201607130655342_addissubscribetonewslettertocustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607130705159_addmembershiptype.cs" />
+    <Compile Include="Migrations\201607130705159_addmembershiptype.Designer.cs">
+      <DependentUpon>201607130705159_addmembershiptype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607130716253_populatemebershiptype.cs" />
+    <Compile Include="Migrations\201607130716253_populatemebershiptype.Designer.cs">
+      <DependentUpon>201607130716253_populatemebershiptype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607130733401_applyannotationtocustomername.cs" />
+    <Compile Include="Migrations\201607130733401_applyannotationtocustomername.Designer.cs">
+      <DependentUpon>201607130733401_applyannotationtocustomername.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Bootstrap-lumen.css" />
@@ -234,10 +254,12 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Movie\Randome.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -245,6 +267,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201607130646238_InitialModel.resx">
+      <DependentUpon>201607130646238_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607130655342_addissubscribetonewslettertocustomer.resx">
+      <DependentUpon>201607130655342_addissubscribetonewslettertocustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607130705159_addmembershiptype.resx">
+      <DependentUpon>201607130705159_addmembershiptype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607130716253_populatemebershiptype.resx">
+      <DependentUpon>201607130716253_populatemebershiptype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607130733401_applyannotationtocustomername.resx">
+      <DependentUpon>201607130733401_applyannotationtocustomername.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
